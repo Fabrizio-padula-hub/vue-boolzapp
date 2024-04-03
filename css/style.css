@@ -193,3 +193,11 @@ body{
     padding-left: 10px;
 }
 
+/*-----------
+   HOVER
+-----------*/
+.container-user:hover{
+    background-color: #e9ebeb;
+    cursor: pointer;
+}
+
