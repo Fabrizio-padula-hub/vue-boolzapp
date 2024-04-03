@@ -34,7 +34,7 @@
                             <i class="fa-solid fa-ellipsis-vertical"></i>
                         </div>
                         <!-- icone stato -->
-                        
+
                     </div>
                     <!-- /barra superiore profilo -->
 
@@ -69,28 +69,10 @@
 
                     <!-- chat utenti -->
                     <div class="chat-user">
-                        <div class="container-user p-20">
+                        <div v-for="(user, index) in contacts" class="container-user p-20">
                             <div class="picture-name my-d-flex">
-                                <img class="profile-img" src="./img/avatar_1.jpg" alt="">
-                                <span>Marco</span>
-                            </div>
-                        </div>
-                        <div class="container-user p-20">
-                            <div class="picture-name my-d-flex">
-                                <img class="profile-img" src="./img/avatar_1.jpg" alt="">
-                                <span>Marco</span>
-                            </div>
-                        </div>
-                        <div class="container-user p-20">
-                            <div class="picture-name my-d-flex">
-                                <img class="profile-img" src="./img/avatar_1.jpg" alt="">
-                                <span>Marco</span>
-                            </div>
-                        </div>
-                        <div class="container-user p-20">
-                            <div class="picture-name my-d-flex">
-                                <img class="profile-img" src="./img/avatar_1.jpg" alt="">
-                                <span>Marco</span>
+                                <img class="profile-img" :src="'./img/avatar' + user.avatar + '.jpg'" alt="">
+                                <span>{{user.name}}</span>
                             </div>
                         </div>
                     </div>
