@@ -11,6 +11,8 @@ img{
 }
 body{
     font-family: "Poppins", sans-serif;
+    height: 100vh;
+    background: linear-gradient(to bottom, #1B9688 150px, #DBDBD2 150px, #DBDBD2 100%);
 }
 
 /*-----------
@@ -33,6 +35,9 @@ body{
 -----------*/
 .profile-img{
     border-radius: 100%;
+}
+.picture-name img{
+    max-width: 20%;
 }
 .card-message{
     background-color: lightgray;
@@ -63,15 +68,12 @@ body{
 -----------*/
 .wrapper{
     width: 980px;
-    height: 100vh;
+    min-height: 500px;
     margin: 20px auto;
     flex-wrap: nowrap;
 }
 
 /* SECTION CHAT */
-.picture-name img{
-    max-width: 20%;
-}
 .profile-bar{
     background-color: #eaeaea;
     justify-content: space-between;
@@ -102,4 +104,35 @@ body{
     text-decoration: underline;
 }
 
+/* SEARCH USER */
+.search-user{
+    padding: 5px;
+    background-color: #fafafa;
+}
+.search-user .icon-search{
+    background-color: #fff;
+    min-width: 50px;
+    padding: 5px;
+    font-size: 12px;
+    text-align: center;
+    color: #b2b7b8;
+    border: 1px solid lightgray;
+}
+.search-user input{
+    border: 1px solid lightgray;
+    width: 100%;
+    padding-left: 10px;
+}
+
+/* USER CHAT */
+.chat-user{
+    /* height: 100vh; */
+    overflow: hidden;
+}
+.container-user .picture-name img{
+    margin-right: 14px;
+}
+.container-user{
+    border-top: 1px solid lightgray;
+}
 
