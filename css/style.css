@@ -54,6 +54,9 @@ body{
 .col-80{
     width: 80%;
 }
+.col-50{
+    width: 50%;
+}
 .my-d-flex{
     display: flex;
 }
@@ -68,6 +71,9 @@ body{
 }
 .bg-primary{
     background-color: #eaeaea;
+}
+.radius{
+    border-radius: 12px;
 }
 
 
@@ -160,7 +166,17 @@ body{
 .main-message{
     height: calc(100% - 100px);
     background-image: url("../img/mine.jpg");
-
+    padding: 35px;
+    flex-direction: column;
+    gap: 10px;
+}
+.message-send{
+    background-color: #d5f9ba;
+    align-self: flex-end;
+}
+.message-received{
+    background-color: #fff;
+    align-self: flex-start;
 }
 
 /* BAR SEND MESSAGE */
