@@ -51,6 +51,12 @@ body{
 .align-c{
     align-items: center;
 }
+.p-10{
+    padding: 10px;
+}
+.p-20{
+    padding: 10px 20px;
+}
 
 /*-----------
     MAIN
@@ -69,11 +75,31 @@ body{
 .profile-bar{
     background-color: #eaeaea;
     justify-content: space-between;
-    padding: 10px;
 }
 .icons-state{
     justify-content: space-between;
     color: #b1b1b1;
+}
+
+/* NOTIFICATIONS */
+.notifications{
+ background-color: #8edafc;
+}
+.alarm-bell{
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    background-color: #f2fbff;
+    justify-content: center;
+    color: #8edafc;
+    margin-right: 10px;
+}
+.text-notifications{
+    font-size: 10px;
+}
+.text-notifications .text-push{
+    color: #5887ab;
+    text-decoration: underline;
 }
 
 
