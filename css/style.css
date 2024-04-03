@@ -68,12 +68,15 @@ body{
 -----------*/
 .wrapper{
     width: 980px;
-    min-height: 500px;
+    min-height: 700px;
     margin: 20px auto;
     flex-wrap: nowrap;
 }
+.chat{
+    background-color: #fafafa;
+}
 
-/* SECTION CHAT */
+/* TOP BAR */
 .profile-bar{
     background-color: #eaeaea;
     justify-content: space-between;
@@ -126,8 +129,8 @@ body{
 
 /* USER CHAT */
 .chat-user{
-    /* height: 100vh; */
-    overflow: hidden;
+    max-height: calc(100vh - 160px); 
+    overflow-y: auto;
 }
 .container-user .picture-name img{
     margin-right: 14px;
