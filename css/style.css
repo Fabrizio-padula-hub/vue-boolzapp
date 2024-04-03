@@ -45,6 +45,12 @@ body{
 .col-70{
     width: 70%;
 }
+.my-d-flex{
+    display: flex;
+}
+.align-c{
+    align-items: center;
+}
 
 /*-----------
     MAIN
@@ -53,12 +59,21 @@ body{
     width: 980px;
     height: 100vh;
     margin: 20px auto;
-    display: flex;
     flex-wrap: nowrap;
 }
 
 /* SECTION CHAT */
 .picture-name img{
-    max-width: 16%;
+    max-width: 20%;
 }
+.profile-bar{
+    background-color: #eaeaea;
+    justify-content: space-between;
+    padding: 10px;
+}
+.icons-state{
+    justify-content: space-between;
+    color: #b1b1b1;
+}
+
 
