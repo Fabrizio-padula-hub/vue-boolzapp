@@ -125,7 +125,7 @@
                     <!-- interazione messaggio -->
                     <div class="message-writing my-d-flex align-c bg-primary">
                         <i class="fa-regular fa-face-smile col-10"></i>
-                        <input class="col-80" type="text" placeholder="Scrivi un messaggio">
+                        <input class="col-80" type="text" placeholder="Scrivi un messaggio" @keyup.enter="addNewMessage" v-model="textInput">
                         <i class="fa-solid fa-microphone col-10"></i>
                     </div>
                     <!-- /interazione messaggio -->

@@ -1,4 +1,5 @@
 const { createApp } = Vue;
+let textInput= '';
 
 createApp({
     data() {
@@ -84,15 +85,41 @@ createApp({
             ],
           },
         ],
-        selectedContactIndex: 0
+        selectedContactIndex: 0,
+        
       };
     },
     methods: {
+      // funzione che prende l'indice della persona
+      // e lo attacca a messages
       showConversation(index) {
         this.selectedContactIndex = index;
-      }
+      },
+      // funzione che crea un nuovo oggetto
+      // col messaggio scritto nell'input
+      // e lo pusha nella chat
+      addNewMessage(){
+        const newMessage = {
+          date: '10/01/2020 15:50:00',
+          message: this.textInput,
+          status: 'sent'
+        }
+        const user = this.contacts[this.selectedContactIndex];
+        user.messages.push(newMessage);
+        this.textInput = '';
+      },
+      // funzione che crea un nuovo messaggio
+      // di risposta all'interlocutore
+      answerMessage(){
+        
+      },
+     
+      
+      
       
     }
     
 }).mount('#app');
+
+
 
