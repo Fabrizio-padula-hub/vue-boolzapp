@@ -69,7 +69,7 @@
 
                     <!-- chat utenti -->
                     <div class="chat-user">
-                        <div v-for="(user, index) in contacts" class="container-user p-20">
+                        <div v-for="(user, index) in contacts" @click="showConversation(index)" class="container-user p-20">
                             <div class="picture-name my-d-flex">
                                 <img class="profile-img" :src="'./img/avatar' + user.avatar + '.jpg'" alt="">
                                 <span>{{user.name}}</span>
@@ -104,20 +104,22 @@
                     <!-- /barra superiore profilo -->
 
                     <!-- corpo lettura messaggi -->
-                    <div v-for="(user, userIndex) in contacts" :key="userIndex" class="main-message my-d-flex">
-                        <template v-for="(messageUser, indexMessage) in user.messages">
-                            <div v-if="messageUser.status === 'sent'" class="message-send p-10 radius col-50">
-                                <div>
-                                    <span>{{ messageUser.message }}</span>
+                    <template v-for="(user, userIndex) in contacts" :key="userIndex">
+                        <div v-if="selectedContactIndex === userIndex" class="main-message my-d-flex">
+                            <template v-for="(messageUser, indexMessage) in user.messages">
+                                <div v-if="messageUser.status === 'sent'" class="message-send p-10 radius col-50">
+                                    <div>
+                                        <span>{{ messageUser.message }}</span>
+                                    </div>
                                 </div>
-                            </div>
-                            <div v-else class="message-received p-10 radius col-50">
-                                <div>
-                                    <span>{{ messageUser.message }}</span>
+                                <div v-else class="message-received p-10 radius col-50">
+                                    <div>
+                                        <span>{{ messageUser.message }}</span>
+                                    </div>
                                 </div>
-                            </div>
-                        </template>
-                    </div>
+                            </template>
+                        </div>
+                    </template>
                     <!-- /corpo lettura messaggi -->
 
                     <!-- interazione messaggio -->
