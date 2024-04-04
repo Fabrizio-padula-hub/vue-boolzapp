@@ -104,19 +104,21 @@
                     <!-- /barra superiore profilo -->
 
                     <!-- corpo lettura messaggi -->
-                    <div class="main-message my-d-flex">
-                        <div class="message-send p-10 radius col-50">
-                            <div>
-                                <span>[message send]</span>
+                    <div v-for="(user, userIndex) in contacts" :key="userIndex" class="main-message my-d-flex">
+                        <template v-for="(messageUser, indexMessage) in user.messages">
+                            <div v-if="messageUser.status === 'sent'" class="message-send p-10 radius col-50">
+                                <div>
+                                    <span>{{ messageUser.message }}</span>
+                                </div>
                             </div>
-                        </div>
-                        <div class="message-received p-10 radius col-50">
-                            <div>
-                                <span>[message received]</span>
+                            <div v-else class="message-received p-10 radius col-50">
+                                <div>
+                                    <span>{{ messageUser.message }}</span>
+                                </div>
                             </div>
-                        </div>
+                        </template>
                     </div>
-                    <!-- corpo lettura messaggi -->
+                    <!-- /corpo lettura messaggi -->
 
                     <!-- interazione messaggio -->
                     <div class="message-writing my-d-flex align-c bg-primary">

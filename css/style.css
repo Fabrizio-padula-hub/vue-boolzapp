@@ -81,9 +81,9 @@ body{
     MAIN
 -----------*/
 .wrapper{
-    width: 980px;
-    min-height: 700px;
-    margin: 20px auto;
+    width: 80%;
+    height: 100vh;
+    margin: 0 auto;
     flex-wrap: nowrap;
 }
 .chat{
@@ -143,7 +143,7 @@ body{
 
 /* USER CHAT */
 .chat-user{
-    max-height: calc(100vh - 160px); 
+    max-height: calc(100% - 160px); 
     overflow-y: auto;
 }
 .container-user .picture-name img{
@@ -169,6 +169,7 @@ body{
     padding: 35px;
     flex-direction: column;
     gap: 10px;
+    overflow-y: auto;
 }
 .message-send{
     background-color: #d5f9ba;
