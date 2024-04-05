@@ -110,11 +110,13 @@
                                 <div v-if="messageUser.status === 'sent'" class="message-send p-10 radius col-50">
                                     <div>
                                         <span>{{ messageUser.message }}</span>
+                                        <span class="time-and-date my-d-flex">{{ messageUser.date }}</span>
                                     </div>
                                 </div>
                                 <div v-else class="message-received p-10 radius col-50">
                                     <div>
                                         <span>{{ messageUser.message }}</span>
+                                        <span class="time-and-date my-d-flex">{{ messageUser.date }}</span>
                                     </div>
                                 </div>
                             </template>

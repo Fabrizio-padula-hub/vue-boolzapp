@@ -107,16 +107,18 @@ createApp({
         const user = this.contacts[this.selectedContactIndex];
         user.messages.push(newMessage);
         this.textInput = '';
+
+        // funzione che crea un nuovo messaggio
+        // di risposta all'interlocutore
+        setTimeout(() => {
+          const responseMessage = {
+              date: '10/01/2020 15:51:00', 
+              message: 'OK',
+              status: 'received' 
+          };
+          user.messages.push(responseMessage);
+        }, 1500);
       },
-      // funzione che crea un nuovo messaggio
-      // di risposta all'interlocutore
-      answerMessage(){
-        
-      },
-     
-      
-      
-      
     }
     
 }).mount('#app');
