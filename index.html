@@ -63,17 +63,19 @@
                         <div class="icon-search">
                             <i class="fa-solid fa-magnifying-glass"></i>
                         </div>
-                        <input type="text" placeholder="Cerca o inizia una nuova chat">
+                        <input type="text" placeholder="Cerca o inizia una nuova chat" @keyup="nameFilter()" v-model="searchName">
                     </div>
                     <!-- /ricerca utente -->
 
                     <!-- chat utenti -->
                     <div class="chat-user">
                         <div v-for="(user, index) in contacts" @click="showConversation(index)" class="container-user p-20">
-                            <div class="picture-name my-d-flex">
-                                <img class="profile-img" :src="'./img/avatar' + user.avatar + '.jpg'" alt="">
-                                <span>{{user.name}}</span>
-                            </div>
+                            <template v-if="user.visible">
+                                <div class="picture-name my-d-flex">
+                                    <img class="profile-img" :src="'./img/avatar' + user.avatar + '.jpg'" alt="">
+                                    <span>{{user.name}}</span>
+                                </div>
+                            </template>
                         </div>
                     </div>
                     <!-- /chat utenti -->
@@ -87,9 +89,9 @@
                     <!-- barra superiore profilo -->
                     <div class="profile-bar my-d-flex p-10 bg-primary">
                         <!-- foto profilo e nome -->
-                        <div class="picture-name my-d-flex col-70 align-c">
-                            <img class="profile-img" src="./img/avatar_1.jpg" alt="">
-                            <span>Marco</span>
+                        <div v-for="(user, index) in contacts" class="picture-name my-d-flex col-70 align-c">
+                            <img class="profile-img"  :src="'./img/avatar' + user.avatar + '.jpg'" alt="">
+                            <span>{{user.name}}</span>
                         </div>
                         <!-- /foto profilo e nome -->
 
