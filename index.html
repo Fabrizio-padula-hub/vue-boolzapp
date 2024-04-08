@@ -89,9 +89,9 @@
                     <!-- barra superiore profilo -->
                     <div class="profile-bar my-d-flex p-10 bg-primary">
                         <!-- foto profilo e nome -->
-                        <div v-for="(user, index) in contacts" class="picture-name my-d-flex col-70 align-c">
-                            <img class="profile-img"  :src="'./img/avatar' + user.avatar + '.jpg'" alt="">
-                            <span>{{user.name}}</span>
+                        <div class="picture-name my-d-flex col-70 align-c">
+                            <img class="profile-img"  :src="'./img/avatar' + contacts[selectedContactIndex].avatar + '.jpg'" alt="">
+                            <span>{{contacts[selectedContactIndex].name}}</span>
                         </div>
                         <!-- /foto profilo e nome -->
 
